@@ -53,9 +53,6 @@ public class CreateServlet extends HttpServlet {
             em.getTransaction().commit();
             em.close();
 
-            // 自動採番されたIDの値を表示
-            response.getWriter().append(Integer.valueOf(t.getId()).toString());
-
             response.sendRedirect(request.getContextPath() + "/index");
 
         }
